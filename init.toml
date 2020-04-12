@@ -25,6 +25,9 @@
     enable_statusline_mode = false
 
     relativenumber = false 
+    enable_cursorline = false
+    autocomplete_method = "coc"
+    bootstrap_after = "myspacevim#after"
 
 # Enable autocomplete layer
 [[layers]]
@@ -33,15 +36,30 @@ auto-completion-return-key-behavior = "complete"
 auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
+name = 'lsp'
+filetypes = [
+  'vue',
+  'javascript',
+  'typescript',
+  'python'
+]
+
+[[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
+
+[[layers]]
+name = 'fuzzyfind'
 
 [[layers]]
 name = 'colorscheme'
 
 [[layers]]
 name = 'japanese'
+
+[[layers]]
+name = 'git'
 
 [[layers]]
 name = 'github'
@@ -56,6 +74,9 @@ name = 'lang#html'
 name = 'lang#javascript'
 
 [[layers]]
+name = 'lang#typescript'
+
+[[layers]]
 name = 'lang#vue'
 
 [[layers]]
@@ -64,3 +85,8 @@ name = 'lang#php'
 [[layers]]
 name = 'lang#python'
 
+[[layers]]
+name = 'fzf'
+
+[[custom_plugins]]
+name = 'junegunn/fzf.vim'
